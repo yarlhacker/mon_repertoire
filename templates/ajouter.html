@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <form method="POST" action="{% url 'ajouter' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group text-center ">
+                <label for="exampleFormControlFile1">photo</label>
+                <input type="file" class="form-control-file" id="exampleFormControlFile1" name="photo">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">nom</label>
+                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder" name="nom">
+            </div>
+            <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">prenom</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder" name="prenom">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Phone</label>
+                <input type="phone" class="form-control" id="exampleInputPassword1" placeholder="phone" name="phone">
+            </div>
+            <div class="text-center mt-12">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            
+        </form>
+    </div>
+
+</body>
+</html>
