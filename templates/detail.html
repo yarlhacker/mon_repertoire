@@ -1,1 +1,13 @@
 <h1> LISTE DES DETAILS DES CONTACTS</h1>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+<div class="container">
+    <button type="button" class="btn btn-secondary"><a href="{% url 'index' %}">Go back</a></button>
+    <div><img src="{{contact.photo.url}}" class="rounded float-start" alt="{{contact.nom}}"></div>
+    <h4>{{contact.nom}}</h4>
+    <p>{{contact.prenom}}</p>
+    <p>{{contact.contact}}</p>
+    <p>{{contact.email}}</p>
+</div>

@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class Base(models.Model):
     date_add = models.DateField(auto_now_add=True)
     date_update = models.DateField(auto_now=True)
-    satuts = models.BooleanField(default=True)
+    status = models.BooleanField(default=True)
 
     class Meta:
         abstract = True

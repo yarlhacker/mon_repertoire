@@ -11,7 +11,7 @@
     
     <div class="container">
         <form method="POST" action="{% url 'ajouter' %}" enctype="multipart/form-data">
-            {% csrf_token %}
+           {% csrf_token %}
             <div class="form-group text-center ">
                 <label for="exampleFormControlFile1">photo</label>
                 <input type="file" class="form-control-file" id="exampleFormControlFile1" name="photo">
